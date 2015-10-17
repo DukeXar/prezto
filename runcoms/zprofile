@@ -42,7 +42,18 @@ typeset -gU cdpath fpath mailpath path
 # )
 
 # Set the list of directories that Zsh searches for programs.
+
+export M2_HOME=~/opt/apache-maven-3.2.2
+export M2=$M2_HOME/bin
+
+export CHROME_DEVEL_SANDBOX=/usr/local/sbin/chrome-devel-sandbox
+#source '/home/klautsan/opt/google-cloud-sdk/path.zsh.inc'
+
 path=(
+  ~/bin
+  ~/opt/watchman
+  $M2
+  ~/src/depot_tools
   /usr/local/{bin,sbin}
   $path
 )

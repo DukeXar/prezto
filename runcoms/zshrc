@@ -11,3 +11,20 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+eval `dircolors $HOME/src/dircolors-solarized/dircolors.ansi-universal`
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias view='vim -R'
+alias -g L='| less'
+alias -g LL='2>&1 | less'
+alias -g V='| vim -R -'
+alias -g STLF='| perl ~/src/work/tools/gstlfilt/gSTLFilt.pl -iter:s -width:100'
+alias mkd="make --no-print-directory"
+alias mk="make --no-print-directory -j 3"
+alias j="jobs"
+alias sub="~/opt/sublime/sublime_text"
+
+# The next line enables bash completion for gcloud.
+#source '~/opt/google-cloud-sdk/completion.zsh.inc'
