@@ -13,5 +13,10 @@ fi
 # Load dependencies.
 pmodload 'helper'
 
-# Source module files.
-source "${0:h}/alias.zsh"
+# Get the prefix or use the default.
+zstyle -s ':prezto:module:git' aliases '_git_aliases_enabled' || _git_aliases_enabled='no'
+
+if [[ "$_git_aliases_enabled" == "yes" ]]; then
+    # Source module files.
+    source "${0:h}/alias.zsh"
+fi
